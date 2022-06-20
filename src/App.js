@@ -60,7 +60,7 @@ const App = () => {
     localStorage.setItem('react-notes-app-data', JSON.stringify(newNotes));
   }
 
-  const handleEditFormChange = (event) => {
+  const handleEditFormChange = (event, setEditFormData) => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute('name');
@@ -176,7 +176,8 @@ const App = () => {
       editNoteId={editNoteId}
       editFormData={editFormData}
       handleEditFormChange={handleEditFormChange}
-      handleEditFormSubmit={handleEditFormSubmit}/>
+      handleEditFormSubmit={handleEditFormSubmit}
+      setEditFormData={setEditFormData}/>
       <TagInput tags={tags}
       handleKeyDown={handleKeyDown}
       removeTag={removeTag}/>

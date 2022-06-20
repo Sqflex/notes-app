@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 
 const NotesList = ({ notes, handleAddNote, handleDeleteNote, 
     handleEditClick, handleSaveClick, editNoteId, editFormData, handleEditFormChange, 
-    handleEditFormSubmit }) => {
+    handleEditFormSubmit, setEditFormData }) => {
     return <div className="notes-list">
         {notes.map((note) => (
             <Fragment>
@@ -14,7 +14,8 @@ const NotesList = ({ notes, handleAddNote, handleDeleteNote,
                 handleDeleteNote={handleDeleteNote} 
                 editFormData={editFormData}  
                 handleEditFormChange={handleEditFormChange} 
-                handleEditFormSubmit={handleEditFormSubmit}/> : 
+                handleEditFormSubmit={handleEditFormSubmit}
+                setEditFormData={setEditFormData}/> : 
                 <Note id={note.id} text={note.text} handleDeleteNote={handleDeleteNote} 
                 handleEditClick={handleEditClick} note={note}/>}
             </Fragment>
