@@ -1,12 +1,10 @@
-import { React, useState, useEffect} from 'react';
+import { useState, useEffect} from 'react';
 //import ContentEditable from 'react-contenteditable';
 
 const EditNote = ({editFormData, handleEditFormChange, handleEditFormSubmit}) => {
     return <div className="note edit">
         <textarea
             name='text' 
-            rows="8" 
-            cols='10' 
             placeholder="Type to add a note here..."
             value={editFormData.text}
             onChange={handleEditFormChange}

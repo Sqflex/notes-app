@@ -1,4 +1,3 @@
-import React from 'react';
 import { MdSearch } from 'react-icons/md';
 // import SelectSearch from 'react-select-search';
 
