@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react';
 //import ContentEditable from 'react-contenteditable';
 
-const EditNote = ({editFormData, handleEditFormChange, handleEditFormSubmit,setEditFormData}) => {
+const EditNote = ({editFormData, handleEditFormChange, handleEditFormSubmit}) => {
     return <div className="note edit">
         <textarea
             name='text' 
@@ -13,7 +13,7 @@ const EditNote = ({editFormData, handleEditFormChange, handleEditFormSubmit,setE
         placeholder="Type to add a note here..." className='textarea-edit' 
         onKeyDown={(e) => handleEditFormChange(e)}>{editFormData.text}</div> */}
         <div className="note-footer add">
-            <button className='save' onClick={(event) => handleEditFormSubmit(event, setEditFormData)}>Save</button>
+            <button className='save' onClick={handleEditFormSubmit}>Save</button>
         </div>
     </div>
 };

@@ -60,7 +60,7 @@ const App = () => {
     localStorage.setItem('react-notes-app-data', JSON.stringify(newNotes));
   }
 
-  const handleEditFormChange = (event, setEditFormData) => {
+  const handleEditFormChange = (event) => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute('name');
@@ -151,17 +151,6 @@ const App = () => {
     localStorage.setItem('react-notes-app-data',JSON.stringify(newNotes));
   }
 
-  const handleEditNote = (id, text) => {
-    setEditNoteId(id);
-
-    const noteValues = {
-      id: id,
-      text: text,
-    }
-
-    setEditNoteData(noteValues);
-  }
-
   return <>
     <h1 className="notes-title">Notes</h1>
     <div className="container">
@@ -172,12 +161,10 @@ const App = () => {
       handleAddNote={AddNote}
       handleDeleteNote={deleteNote}
       handleEditClick={handleEditClick}
-      handleEditNote={handleEditNote}
       editNoteId={editNoteId}
       editFormData={editFormData}
       handleEditFormChange={handleEditFormChange}
-      handleEditFormSubmit={handleEditFormSubmit}
-      setEditFormData={setEditFormData}/>
+      handleEditFormSubmit={handleEditFormSubmit}/>
       <TagInput tags={tags}
       handleKeyDown={handleKeyDown}
       removeTag={removeTag}/>

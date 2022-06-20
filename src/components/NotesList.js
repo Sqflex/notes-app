@@ -14,8 +14,7 @@ const NotesList = ({ notes, handleAddNote, handleDeleteNote,
                 handleDeleteNote={handleDeleteNote} 
                 editFormData={editFormData}  
                 handleEditFormChange={handleEditFormChange} 
-                handleEditFormSubmit={handleEditFormSubmit}
-                setEditFormData={setEditFormData}/> : 
+                handleEditFormSubmit={handleEditFormSubmit}/> : 
                 <Note id={note.id} text={note.text} handleDeleteNote={handleDeleteNote} 
                 handleEditClick={handleEditClick} note={note}/>}
             </Fragment>
