@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+// import { useState, useEffect} from 'react';
 //import ContentEditable from 'react-contenteditable';
 
 const EditNote = ({editFormData, handleEditFormChange, handleEditFormSubmit}) => {
